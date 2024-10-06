@@ -15,9 +15,9 @@ var items = [
 	{"name": "test_item_common_no5", "texture_path": "res://assets/items/test_item_common_no5.png", "probability": 20},
 ]
 
-@export var item_drop_chance : int = 20 : set = set_item_drop_chance
+@export var item_drop_chance : int = 30 : set = set_item_drop_chance
 
-@onready var item_sprite = $"../ItemSprite"
+@onready var item_sprite = $ItemSprite
 
 func _ready():
 	texture_closed = preload("res://assets/cabinet/cabinet_closed.png")

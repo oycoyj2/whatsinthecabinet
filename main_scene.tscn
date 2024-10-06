@@ -21,5 +21,7 @@ script = ExtResource("2_88sbj")
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_alkio")
 
-[node name="ItemSprite" type="Sprite2D" parent="."]
+[node name="ItemSprite" type="Sprite2D" parent="Cabinet"]
 visible = false
+position = Vector2(-3.33334, -40.8334)
+scale = Vector2(0.833333, 0.833333)
