@@ -20,3 +20,6 @@ script = ExtResource("2_88sbj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabinet/CabinetArea"]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_alkio")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+visible = false
