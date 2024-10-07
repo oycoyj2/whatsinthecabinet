@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqodria1r53am"]
+
+[ext_resource type="Texture2D" uid="uid://bpgjqtuvrsimu" path="res://assets/cabinet/cabinet_closed.png" id="1_r2e8e"]
+[ext_resource type="Script" path="res://scripts/cabinet.gd" id="2_51gjx"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="3_hba7p"]
+[ext_resource type="Texture2D" uid="uid://dda2tq83nkhow" path="res://assets/ui/collection_box.png" id="4_ry17h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alkio"]
+size = Vector2(265, 425)
+
+[node name="MainScene" type="Node2D"]
+position = Vector2(358, 872)
+
+[node name="Cabinet" type="Sprite2D" parent="."]
+position = Vector2(4, 49)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_r2e8e")
+script = ExtResource("2_51gjx")
+
+[node name="CabinetArea" type="Area2D" parent="Cabinet"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabinet/CabinetArea"]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_alkio")
+
+[node name="ItemSprite" type="Sprite2D" parent="Cabinet"]
+visible = false
+position = Vector2(-3.33334, -40.8334)
+scale = Vector2(0.833333, 0.833333)
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("3_hba7p")
+
+[node name="CollectionButton" type="TextureButton" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.0
+offset_bottom = 92.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_ry17h")
+metadata/_edit_use_anchors_ = true

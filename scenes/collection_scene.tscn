@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b7qe7jbm67sbu"]
+
+[node name="CollectionScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 480.0
+offset_right = 565.0
+offset_bottom = 910.0
