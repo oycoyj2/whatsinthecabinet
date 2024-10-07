@@ -7,15 +7,9 @@ var texture_opened : Texture2D
 
 var total_item_probability : int = 0
 
-var items = [
-	{"name": "test_item_common_no1", "texture_path": "res://assets/items/test_item_common_no1.png", "probability": 20},
-	{"name": "test_item_common_no2", "texture_path": "res://assets/items/test_item_common_no2.png", "probability": 20},
-	{"name": "test_item_common_no3", "texture_path": "res://assets/items/test_item_common_no3.png", "probability": 20},
-	{"name": "test_item_common_no4", "texture_path": "res://assets/items/test_item_common_no4.png", "probability": 20},
-	{"name": "test_item_common_no5", "texture_path": "res://assets/items/test_item_common_no5.png", "probability": 20},
-]
+@export var items: Array[Item] = []
 
-@export var item_drop_chance : int = 30 : set = set_item_drop_chance
+@export var item_drop_chance : int = 90 : set = set_item_drop_chance
 
 @onready var item_sprite = $ItemSprite
 
@@ -65,16 +59,16 @@ func try_drop_item():
 	else:
 		print("아이템이 등장하지 않았습니다.")
 
-func select_random_item() -> Dictionary:
+func select_random_item() -> Item:
 	var rand = randi() % 100
 	var cumulative = 0
 	for item in items:
 		cumulative += item.probability
 		if rand < cumulative:
 			return item
-	return {}
+	return null
 	
-func display_item(item: Dictionary):
+func display_item(item: Item):
 	var texture = load(item.texture_path)
 	item_sprite.texture = texture
 	item_sprite.scale = Vector2(1, 1)

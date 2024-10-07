@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://m0yjyt8dm4g4"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_1by2s"]
+
+[resource]
+script = ExtResource("1_1by2s")
+name = "Test1"
+texture_path = "res://assets/items/test_item_common_no1.png"
+probability = 20
+description = "test1 item"

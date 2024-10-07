@@ -1,20 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7qe7jbm67sbu"]
 
-[ext_resource type="Script" path="res://scenes/collection.gd" id="1_8srcu"]
+[ext_resource type="Script" path="res://scripts/collection.gd" id="1_8srcu"]
 
 [node name="Collection" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_8srcu")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-layout_mode = 2
-columns = 5
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0
