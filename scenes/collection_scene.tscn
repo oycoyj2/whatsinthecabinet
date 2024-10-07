@@ -1,12 +1,28 @@
-[gd_scene format=3 uid="uid://b7qe7jbm67sbu"]
+[gd_scene load_steps=2 format=3 uid="uid://b7qe7jbm67sbu"]
 
-[node name="CollectionScene" type="Control"]
+[ext_resource type="Script" path="res://scenes/collection.gd" id="1_8srcu"]
+
+[node name="Collection" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_8srcu")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 480.0
-offset_right = 565.0
-offset_bottom = 910.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 96.0
+offset_bottom = 53.0
+text = "뒤로"
+text_overrun_behavior = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

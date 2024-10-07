@@ -81,4 +81,6 @@ func display_item(item: Dictionary):
 	item_sprite.visible = true
 	print("아이템 획득:", item.name)
 	
+	CollectionManager.add_item(item)
+	
 	
